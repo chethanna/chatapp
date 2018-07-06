@@ -1,0 +1,189 @@
+<html>
+
+<head>
+	<title>ChatApp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	
+	<link rel="stylesheet" type="text/css"  href="index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!--Chat list code -->	
+	<!-- Bar containing App name and profile pic --> 
+	<div class="container-fluid" >
+		<div class="row">
+			<div class=" col-12 col-md-6 col-lg-5 border-right " id="chat-list" style="height : 100%;">
+				<nav class="navbar navbar-light main-head rounded-top" >
+					ChatApp
+					<!--Button uses modal to give the user option to change profile picture -->
+					<button type="button" class="btn rounded names font-weight-bold" style="background-color : #ffc107; color: white; vertical-align : middle;" data-toggle="modal" data-target="#exampleModal">
+						<img src="images/bunny.png"  class="rounded-circle d-inline-block align-top photo-size" alt="">
+						Bugs Bunny
+					</button> 
+				</nav>
+				<!--Menu bar with Camera, Chats(active), Status and Calls option -->
+				<ul class="nav nav-tabs menu-bar rounded-bottom">
+	 				 <li class="nav-item ">
+	    					<a class="nav-link disabled text-muted" href="#">Camera</a>
+	  				</li>
+					<li class="nav-item ">
+						 <a class="nav-link active" href="#">Chats</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled text-muted" href="#">Status</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled text-muted" href="#">Calls</a>
+					</li>
+				</ul>
+				<!--List containing latest chats with other users -->
+				<ul class="list-unstyled list-group">
+  					<li class="media my-2 border-bottom list-group-item-action" >
+	    					<img class="mr-3 rounded-circle photo-size " src="images/duck.jpg" alt="Generic placeholder image">
+						<div class="media-body messageBar text-muted">
+							<h5 class="mt-0 mb-1 names text-dark"> Donald Duck</h5>
+					      	Ehhhh, what’s up doc?
+					    	</div>
+						<div>
+							<small >3:31pm</small>
+						</div>
+					</li>
+					<li class="media my-2 border-bottom list-group-item-action">
+						<img class="mr-3 rounded-circle photo-size" src="images/sailor.png" alt="Generic placeholder image">
+						<div class="media-body messageBar text-muted">
+							<h5 class="mt-0 mb-1 names text-dark"> Popeye</h5>
+						      Hey Bunny.
+						</div>
+						<div>
+							<small >3:20pm</small>
+							<div class="badge badge-success notification">1 </div>
+						</div>
+				  	</li>
+   					<li class="media my-2 border-bottom list-group-item-action">
+						<img class="mr-3 rounded-circle photo-size" src="images/jerry1.jpg" alt="Generic placeholder image">
+						<div class="media-body messageBar text-muted">
+							<h5 class="mt-0 mb-1 names text-dark"> Jerry</h5>
+						      Tom is out for few days
+						</div>
+						<div>
+							<small >Yesterday</small>
+						</div>
+				  	</li>
+				  	<li class="media my-2 border-bottom list-group-item-action">
+						<img class="mr-3 rounded-circle photo-size" src="images/mickey.png" alt="Generic placeholder image">
+						<div class="media-body messageBar text-muted">
+							<h5 class="mt-0 mb-1 names text-dark"> Mickey</h5>
+						      Ok, byeeeee, see ya
+						</div>
+						<div>
+							<small >Yesterday</small>
+							<div class="badge badge-success notification">3 </div>
+						</div>
+				  	</li>
+				</ul>
+			</div>
+			
+<!-- Below is the code for Individual Chat window-->
+			<div class="col-12  col-md-6 col-lg-7" id="chat"  style="height : 100%;">
+				<nav class="navbar navbar-light main-head  text-left rounded-bottom">
+					<a class="navbar-brand " style="color: #ffffff;" href="#">
+						<!-- Back button to traverse back to chat list ( when opened in smaller devices) -->
+				    		<img class="rounded-circle photo-size back-button"src="images/backButton.png" width="40" height="40" class=" " alt="">
+				  		<img class="d-inline-block align-top photo-size rounded-circle "src="images/duck.jpg"   alt="">
+				 		Donald Duck   		
+					</a>
+				</nav>
+				<!-- chat Messages -->
+				<div class="container-fluid ">
+					<div class="row justify-content-center">
+	    					<div class="col-3 col-md-2 time rounded text-center">
+	      					Today
+	    					</div>
+	 				</div>
+	  				<div class="row justify-content-start">
+	    					<div class="col-7  col-md-6 m-2 messages rounded">
+	    	 					Hi, you there?....
+							<div class="text-right text-muted">
+								<small>3:30 pm</small>
+							</div>
+						</div>
+	  				</div>
+					<div class="row justify-content-end">
+						<div class="col-7 col-md-6 m-2 messages	rounded">
+				   			Ehhhh, what’s up doc?
+							<div class="text-right text-muted">
+								<small>3:31 pm</small>
+							</div>
+						</div>
+					</div>	
+					<!-- footer containing text box for the user to enter message and also to include emojis or attachment -->
+					<div class="container-fluid footer rounded">
+						<div class="row no-gutters">
+	    						<div class="col-1 col-lg-1">
+	      						<img class=" chatBarImage my-2 " src="images/smiley.png" alt="">	
+	    						</div>
+	  			  			<div class="col-10 col-lg-10">
+	    	 						<input  class="form-control form-control-sm my-2" id="exampleFormControlInput1" placeholder="Type a message">
+	    						</div>
+	 						<div class="col-1 col-lg-1">
+	      						<img class=" chatBarImage my-2 "  src="images/attach.png"  alt="">	
+	    						</div>
+	     				</div>
+				 	</div>	
+				</div>
+			</div>
+		</div>	
+	</div>
+<!-- modal to give user option to change display picture-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+			    		<h5 class="modal-title" id="exampleModalLabel">Profile Picture</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        		<span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+			    <div class="modal-body picContainer">
+			    		<img src="images/bunny.png" class="rounded-circle profilePic" alt="...">
+				</div>
+			    <div class="modal-footer">
+			    		<button type="button"   onclick="jQuery('#file').click()" class="btn btn-primary">Change Picture</button>
+					<input type="file" id="file" name="file" />
+			    </div>
+			</div>
+		</div>
+	</div>
+<!-- Have used JQuery to hide or display the chat window based on screensize and mouse click.
+	 Not used Bootstrap to do this, since it is difficult to handle display option based on both screensize and mouse click using bootstrap
+	 ( using bootstrap here causes uncontrollable override of display property, resulting in some window wont display in some scenarios)    -->
+	<script>
+   		/* back botton and click on chat contact works only for screen sizes less than 768px,
+		 since both window will be visible anyway for screensizes more than 768px*/
+		$(document).ready(function(){
+				   												$(".messageBar").click(function(){
+																	if ($(window).width()  < 768) {
+				   														$("#chat-list").css({"display":"none "});
+																		$("#chat").css({"display":"block "});
+																	}
+																});
+		});
+
+		$(document).ready(function(){
+    																$(".back-button").click(function(){
+   																	if ($(window).width()  < 768) {
+    	 																	$("#chat-list").css({"display":"block "});
+	    																	$("#chat").css({"display":"none "});
+																	}
+	  															});
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.root {
+	font-size : 16px;
+}
+
+.chatBarImage {
+	 height: 2.5vmax;
+ 	width: 2.5vmax;
+ 	margin-right : 0.25vmax;
+ 	margin-left : 0;
+ }
+ 
+.menu-bar {
+	background-color: #2cb7cbdb;
+}
+
+.photo-size {
+	height : 5vmax;
+	width : 5vmax;
+}
+
+.names {
+	font-size: 1.25rem;
+}
+
+.notification {
+	justify-content: center;
+}
+/*to make the actual button invisible and apply its properties to a customized button to open file explorer */
+ #file {
+	display : none;
+}
+
+.main-head {
+	background-color : #2cb7cbdb;
+	color : #FEFEFE;
+	font-size : 2rem;
+}
+
+.time {
+	background-color : #0066ff59;
+}
+
+.messages {
+	background-color : #fff59d;
+}
+
+.profilePic {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+	height: 50%;
+}
+
+.footer {
+	position: absolute;
+    left: 0; 
+    bottom: 0;
+    width: 100%;
+     text-align: center;
+	background-color : #eeeeee;
+}
+
+/* Media queries */
+@media screen and (max-width : 400px) 
+{
+		.menu-bar {
+		font-size : 0.75rem;
+	}
+		
+	.main-head {
+		font-size : 1.5rem;
+	}
+	
+	.names {
+		font-size : 1rem;
+	}
+	
+	.time {
+		font-size : 1rem;
+	}
+	
+	.messageBar {
+		font-size : 1rem;
+	}
+}
+
+@media screen and (max-width : 768px)
+{
+	#chat {
+		display : none;
+	}
+	
+	.photo-size {
+		height : 10vmax;
+		width : 10vmax;
+	}
+
+	.chatBarImage {
+		 height: 5vmax;
+		 width: 5vmax;
+		 margin-right : 10px;
+		 margin-left : 0;
+	 }
+}
+/*to make sure both chat-list  and individual-chat windows are displayed for larger than 768px devices */
+@media screen and (min-width : 768px)
+{
+	#chat {
+		display : block !important;
+	}
+	
+	#chat-list
+	{
+		display : block !important;
+	}
+}

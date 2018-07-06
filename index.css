@@ -5,9 +5,7 @@
 .chatBarImage {
 	 height: 2.5vmax;
  	width: 2.5vmax;
- 	margin-right : 0.25vmax;
- 	margin-left : 0;
- }
+}
  
 .menu-bar {
 	background-color: #2cb7cbdb;
@@ -34,6 +32,11 @@
 	background-color : #2cb7cbdb;
 	color : #FEFEFE;
 	font-size : 2rem;
+}
+
+.main-head-picSize {
+	height : 4vmax;
+	width : 4vmax;
 }
 
 .time {
@@ -95,12 +98,15 @@
 		height : 10vmax;
 		width : 10vmax;
 	}
-
+	
+	.main-head-picSize {
+		height : 7vmax;
+		width : 7vmax;
+	}
 	.chatBarImage {
-		 height: 5vmax;
-		 width: 5vmax;
-		 margin-right : 10px;
-		 margin-left : 0;
+		 height: 4.5vmax;
+		 width: 4.5vmax;
+		
 	 }
 }
 /*to make sure both chat-list  and individual-chat windows are displayed for larger than 768px devices */

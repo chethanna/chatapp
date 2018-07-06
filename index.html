@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 
 <head>
 	<title>ChatApp</title>
@@ -13,7 +13,7 @@
 <!--Chat list code -->	
 	<!-- Bar containing App name and profile pic --> 
 	<div class="container-fluid" >
-		<div class="row">
+		<div class="row"  style="height : 100%;">
 			<div class=" col-12 col-md-6 col-lg-5 border-right " id="chat-list" style="height : 100%;">
 				<nav class="navbar navbar-light main-head rounded-top" >
 					ChatApp
@@ -86,12 +86,12 @@
 			</div>
 			
 <!-- Below is the code for Individual Chat window-->
-			<div class="col-12  col-md-6 col-lg-7" id="chat"  style="height : 100%;">
+			<div class="col-12  col-md-6 col-lg-7" id="chat" style="height : 100%;">
 				<nav class="navbar navbar-light main-head  text-left rounded-bottom">
 					<a class="navbar-brand " style="color: #ffffff;" href="#">
 						<!-- Back button to traverse back to chat list ( when opened in smaller devices) -->
-				    		<img class="rounded-circle photo-size back-button"src="images/backButton.png" width="40" height="40" class=" " alt="">
-				  		<img class="d-inline-block align-top photo-size rounded-circle "src="images/duck.jpg"   alt="">
+				    		<img class="rounded-circle main-head-picSize back-button"src="images/backButton.png" width="40" height="40" class=" " alt="">
+				  		<img class="d-inline-block align-top main-head-picSize rounded-circle "src="images/duck.jpg"   alt="">
 				 		Donald Duck   		
 					</a>
 				</nav>
@@ -120,15 +120,15 @@
 					</div>	
 					<!-- footer containing text box for the user to enter message and also to include emojis or attachment -->
 					<div class="container-fluid footer rounded">
-						<div class="row no-gutters">
+						<div class="row no-gutters mx-auto">
 	    						<div class="col-1 col-lg-1">
-	      						<img class=" chatBarImage my-2 " src="images/smiley.png" alt="">	
+	      						<img class=" chatBarImage mx-auto my-2 " src="images/smiley.png" alt="">	
 	    						</div>
 	  			  			<div class="col-10 col-lg-10">
-	    	 						<input  class="form-control form-control-sm my-2" id="exampleFormControlInput1" placeholder="Type a message">
+	    	 						<input  class="form-control form-control-sm  mx-auto my-2" id="exampleFormControlInput1" placeholder="Type a message">
 	    						</div>
 	 						<div class="col-1 col-lg-1">
-	      						<img class=" chatBarImage my-2 "  src="images/attach.png"  alt="">	
+	      						<img class=" chatBarImage mx-auto my-2 "  src="images/attach.png"  alt="">	
 	    						</div>
 	     				</div>
 				 	</div>	
@@ -163,21 +163,21 @@
    		/* back botton and click on chat contact works only for screen sizes less than 768px,
 		 since both window will be visible anyway for screensizes more than 768px*/
 		$(document).ready(function(){
-				   												$(".messageBar").click(function(){
-																	if ($(window).width()  < 768) {
-				   														$("#chat-list").css({"display":"none "});
-																		$("#chat").css({"display":"block "});
-																	}
-																});
-		});
+			$(".messageBar").click(function(){
+			if ($(window).width()  < 768) {
+			$("#chat-list").css({"display":"none "});
+			$("#chat").css({"display":"block "});
+			}
+			});
+                });
 
 		$(document).ready(function(){
-    																$(".back-button").click(function(){
-   																	if ($(window).width()  < 768) {
-    	 																	$("#chat-list").css({"display":"block "});
-	    																	$("#chat").css({"display":"none "});
-																	}
-	  															});
+			$(".back-button").click(function(){
+			if ($(window).width()  < 768) {
+    	 		$("#chat-list").css({"display":"block "});
+	    		$("#chat").css({"display":"none "});
+			}
+	  		});
 		});
 	</script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -7,6 +7,11 @@
  	width: 2.5vmax;
 }
  
+.camera {
+	height :20px;
+	width :20px;
+}
+
 .menu-bar {
 	background-color: #2cb7cbdb;
 }
@@ -72,7 +77,7 @@
 	}
 		
 	.main-head {
-		font-size : 1.5rem;
+		font-size : 1.25rem;
 	}
 	
 	.names {
